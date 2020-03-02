@@ -13,6 +13,20 @@
 * phanTuMang = &a[0] : Dieu khien con tro den vi tri a[0]
 * printf("%3d",*phanTuMang); : Hien thi con tro - *phanTuMang la gia tri cua con tro
 *
+*
+** Dia chi va gia tri cua con tro
+* Toan tu dia chi: &
+* Toan tu gia tri: *, *&a = a
+*
+*
+** VD 
+* int a = 10;
+* int *p;
+* p = &a; tuc la:
+* 				gia tri			dia chi
+* a				   10			34DC4567
+* p				34DC4567		98FE56AC
+*
 */
 int a[100],n;
 int *phanTuMang;
@@ -29,7 +43,7 @@ int main()
 	phanTuMang = &a[0]; 
 	printf("Mang vua nhap la: ");
 	for(int i=0;i<n;i++){
-		printf("%3d",*phanTuMang);
+		printf("%3d\t",*phanTuMang);
 		phanTuMang++;
 	}
 }
